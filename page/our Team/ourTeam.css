@@ -6,21 +6,7 @@
 
 
 
-nav {
-    background-color: #333;
-    padding: 10px;
-}
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
 
 #ourTeamImg1 {
     position: relative;
