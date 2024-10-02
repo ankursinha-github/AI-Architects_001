@@ -89,6 +89,7 @@ section {
     height: 20em;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 .childCard:hover {
@@ -117,12 +118,13 @@ section {
 
 /* the main 3 */
 #main3 {
-    max-width: 1200px;
-    margin: 0 auto;
+    border: 1px solid black;
+    max-width: 1200px; 
+    margin: 0 auto; 
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+     grid-gap: 20px;
 }
 
 /* Fade-in Animation */
