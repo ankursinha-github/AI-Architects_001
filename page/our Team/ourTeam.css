@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* main 1 starts here */
+#ourTeamImg1 {
+    position: relative;
+    z-index: 22;
+    width: 100%; 
+    height: 600px;
+    overflow: hidden; 
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#img1 {
+    position: absolute;
+    z-index: 1;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+#ourTeamGlassy {
+    position: absolute;
+    z-index: 22;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+#ourTeamGlassyH1 {
+    color: azure;
+    font-size: 3em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+#ourTeamGlassyp {
+    color: azure;
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+    letter-spacing: 2px;
+    padding: 10px; 
+}
+
+span {
+    color: greenyellow;
+}
+
+/* main 1 ends here  */
+
+/* section tag starts here */
+section {
+    width: fit-content;
+    margin: 2em auto;
+    padding: 2em;
+    font-size: x-large;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* main 2 starts here */
+#ourTeamMain2 {
+    padding: 15px;
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 30px;
+}
+
+.childCard {
+    width: 15em;
+    border-radius: 10px;
+    height: 20em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.childCard:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.teamImage {
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+    width: 95%;
+    margin: auto;
+    height: 80%;
+}
+
+.profileImg {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.childCard:hover .profileImg {
+    transform: scale(1.1);
+}
+
+/* the main 3 */
+#main3 {
+    border: 1px solid black;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+     grid-gap: 20px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+#main3 h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Fancy underline on hover */
+#main3 h2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007BFF;
+    transition: width 0.3s;
+}
+
+#main3 h2:hover::after {
+    width: 100%;
+}
+
+#getInTouch, #mapLocation, #queryForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+/* Card hover effect */
+#getInTouch:hover, #mapLocation:hover, #queryForm:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+#getInTouch p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Styling for Get in Touch Section */
+#getInTouch {
+    padding: 20px 20px 10px;  /* Reduced padding at the bottom */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Get in Touch items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Reduced spacing between items */
+}
+
+.contact-item i {
+    color: #007BFF;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Form input focus effects */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Button with hover effect */
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Slight zoom effect on the map */
+#mapLocation iframe {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+#mapLocation iframe:hover {
+    transform: scale(1.03);
+}
+
+#queryForm{
+    width: 700px;
+
+}
+
+
+form{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+@media (max-width: 768px) {
+    #main3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-item {
+        margin-bottom: 12px;
+    }
+    
+    #getInTouch p {
+        font-size: 0.9rem;
+    }
+
+    #queryForm{
+        width: 80%;
+    }
+    
+}
+
+/* Styling for footer */
+#footer {
+    background-color: #000;
+    color: #f1f1f1;
+    padding: 40px 20px;
+    font-size: 14px;
+    margin-top: 4em;
+}
+
+#footer h3 {
+    color: #90EE90;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #90EE90;
+    font-weight: bold;
+}
+
+#footer a:hover {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+#footer_top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#footer_left {
+    display: flex; 
+    justify-content: space-between;
+    width: 60%;
+}
+
+#footer_left > div {
+    margin-right: 50px;
+}
+
+#footer_left div {
+    margin-bottom: 15px;
+}
+
+#footer_left div span {
+    margin-right: 8px;
+    color: #90EE90;
+}
+
+#footer_right {
+    flex: 1;
+    margin: 10px;
+}
+
+#footer_right input {
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#footer_right a {
+    background-color: #90EE90;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+}
+
+#footer_right a:hover {
+    background-color: #fff;
+    color: #90EE90;
+}
+
+#footer_bottom {
+    text-align: center;
+    border-top: 1px solid #90EE90;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+#footer_bottom u {
+    color: #90EE90;
+}
+
+@media (max-width: 768px) {
+    #footer_top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #footer_left {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #footer_right input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #footer_left > div {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+/* Adjust the row for larger screens */
+@media (min-width: 769px) {
+    #footer_top {
+        justify-content: space-between;
+    }
+
+    #footer_left, #footer_right {
+        margin: 0 10px;
+    }
+}
