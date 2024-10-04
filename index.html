@@ -7,9 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="tailwind.config.js"></script>
-  <title>Document</title>
+  <title>VisionScript Project</title>
   <style>
     /* Global Styling */
     body {
@@ -27,26 +25,53 @@
     h5,
     h6 {
       font-weight: 600;
-      color: #203a43;
+      /* color: #203a43; */
       margin: 0;
     }
 
-    /* Background Image Container */
-    .bg-cover {
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed;
+    /* Hero Section */
+    .hero {
+      position: relative;
       height: 100vh;
+      background-image: url('images/bg.jpeg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
     }
 
-    /* Navbar Styling */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      filter: blur(10px);
+    }
+
+    .hero h1,
+    .hero p,
+    .hero a {
+      position: relative;
+      z-index: 2;
+      filter: none;
+    }
+
+    /* Responsive Navbar */
     nav {
       background: rgba(255, 255, 255, 0.1);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 96%;
       z-index: 100;
       padding: 1rem 2rem;
       display: flex;
@@ -91,6 +116,11 @@
       color: #f97316;
     }
 
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
     .nav-buttons .btn {
       padding: 0.6rem 1.2rem;
       border-radius: 5px;
@@ -99,16 +129,19 @@
       font-size: 1rem;
       font-weight: 500;
       transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
     }
 
     .nav-buttons .btn-signup {
       background: linear-gradient(135deg, #ff416c, #ff4b2b);
-      color: white;
     }
 
     .nav-buttons .btn-signup:hover {
       background: linear-gradient(135deg, #ff4b2b, #ff416c);
       box-shadow: 0 3px 15px rgba(255, 75, 43, 0.4);
+      transform: translateY(-3px);
     }
 
     .nav-buttons .btn-login {
@@ -120,66 +153,65 @@
     .nav-buttons .btn-login:hover {
       background-color: #ffffff;
       color: #ff416c;
+      transform: translateY(-3px);
     }
 
-    /* Toggle button for mobile */
-    .toggle-button {
-      color: white;
-      display: none;
-      cursor: pointer;
-    }
-
-    @media (max-width: 1024px) {
-      .toggle-button {
-        display: block;
-      }
-
+    /* Responsive Design */
+    @media (max-width: 768px) {
       nav ul {
-        position: absolute;
-        top: -100vh;
-        left: 0;
-        width: 100%;
-        background: #203a43;
         flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        transition: all 0.3s ease;
+        display: none;
+        /* Initially hidden */
       }
 
-      nav ul.show-menu {
-        top: 5rem;
+      nav.active ul {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(32, 58, 67, 0.9);
+        width: 100%;
+        padding: 1rem 0;
       }
 
       .nav-buttons {
         flex-direction: column;
         gap: 1rem;
-        margin-top: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
       }
     }
 
-    @media (max-width: 768px) {
-      .logo {
+    /* For Very Small Devices */
+    @media (max-width: 576px) {
+      nav {
+        padding: 0.5rem 1rem;
+      }
+
+      nav .logo {
         font-size: 1.5rem;
       }
 
-      nav ul li a {
-        font-size: 0.9rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .logo {
-        font-size: 1.3rem;
+      nav ul {
+        gap: 1rem;
       }
 
-      nav ul li a {
-        font-size: 0.8rem;
-        padding: 0.5rem 0.8rem;
+      .hero h1 {
+        font-size: 1.5rem;
       }
 
-      .nav-buttons .btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .about-features {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -202,39 +234,50 @@
       line-height: 1.8;
     }
 
-    #about img {
-      max-width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
     /* Features Section */
-    #about ul {
+    .about-features {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      /* Flexible grid for responsive */
+      gap: 20px;
+      margin-top: 3rem;
     }
 
-    #about ul li {
-      border: 1px solid #ddd;
+    .feature {
+      background-color: #f8f9fa;
+      /* Light background */
+      border-radius: 15px;
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      /* Soft shadow */
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
-    #about ul li:hover {
+    .feature:hover {
+      background-color: #ff7f50;
+      /* Coral color on hover */
+      color: white;
       transform: translateY(-10px);
-      background-color: #f5f5f5;
     }
 
-    #about ul li img {
+    .feature h3 {
+      font-size: 1.5rem;
+      color: #203a43;
+      /* Darker heading color */
       margin-bottom: 1rem;
     }
 
-    #about ul li p {
-      font-size: 0.9rem;
+    .feature p {
+      font-size: 1rem;
       color: #555;
+      /* Light text */
+    }
+
+    .feature:hover h3,
+    .feature:hover p {
+      color: white;
+      /* Change text color on hover */
     }
 
     /* Footer */
@@ -250,124 +293,76 @@
       font-size: 0.9rem;
       letter-spacing: 1px;
     }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div class="w-full h-screen bg-cover bg-center bg-fixed text-white" style="background-image: url('images/bg.jpeg')">
-    <header class="bg-black lg:fixed lg:top-0 lg:left-0 lg:w-full">
+  <div class="hero">
+    <header class="lg:fixed lg:top-0 lg:left-0 lg:w-full">
       <nav class="flex items-center justify-between px-12 h-16 lg:gap-28">
-        <a href="#" class="text-2xl font-bold">Nandkishore</a>
-        <div
-          class="dropdown-menu absolute -top-full left-0 max-lg:bg-[#FFFFFF30] w-full flex flex-col gap-6 items-center py-2 text-lg font-bold lg:static lg:flex-row lg:justify-between">
-          <ul class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8">
-            <li class="hover:text-orange-400 cursor-pointer">
-              <a href="index.html
-                ">Home</a>
-            </li>
-            <li class="hover:text-orange-400 cursor-pointer">
-              <a href="./editor/index.html">Editor</a>
-            </li>
-            <li class="hover:text-orange-400 cursor-pointer">
-              <a href="/AI-Architects_001/Documentation/introduction.html">Documentation</a>
-            </li>
-            <li class="hover:text-orange-400 cursor-pointer">
-              <a href="page/our Team/ourTeam.html">Our Team</a>
-            </li>
-          </ul>
-          <div class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8">
-            <button class="hover:text-orange-300 cursor-pointer">
-              <a href="loginAuth/login.html">Login</a>
-            </button>
-            <button class="bg-orange-500 rounded-lg px-2 py-1 hover:text-orange-100 cursor-pointer">
-              <a href="loginAuth/signup.html">Signup</a>
-            </button>
-          </div>
-        </div>
-        <div class="toggle-button lg:hidden">
-          <i class="fa-solid fa-bars fa-lg"></i>
+        <a href="#" class="logo">VisionScript</a>
+        <ul class="flex items-center gap-8">
+          <li class="hover:text-orange-400 cursor-pointer"><a href="#">Home</a></li>
+          <li class="hover:text-orange-400 cursor-pointer"><a href="#">Editor</a></li>
+          <li class="hover:text-orange-400 cursor-pointer"><a href="#">Documentation</a></li>
+          <li class="hover:text-orange-400 cursor-pointer"><a href="#">Our Team</a></li>
+        </ul>
+        <div class="nav-buttons">
+          <button class="btn btn-login">Login</button>
+          <button class="btn btn-signup">Signup</button>
         </div>
       </nav>
     </header>
+    <h1>Empower Your Coding Journey</h1>
+    <p>Join us today and unlock the power of coding with VisionScript!</p>
   </div>
 
-
-
-  <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
-    <h4 class="text-center mb-2 text-lg">About Us</h4>
-    <h2 class="text-center text-5xl">Welcome to VisionScript</h2>
-    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
-      <div class="max-w-max mx-auto relative">
-        <img class="w-full h-80 sm:w-full rounded-3xl max-w-none" src="images/programming.jpg" alt="" />
+  <section id="about">
+    <h2>Welcome to VisionScript</h2>
+    <p>The next-generation scripting language designed to simplify and enhance your programming experience.</p>
+    <div class="about-features">
+      <div class="feature">
+        <h3>Real-Time Compilation</h3>
+        <p>Experience instant feedback on your code with our real-time compilation feature.</p>
       </div>
-      <div class="flex-1">
-        <p class="mb-10 max-w-2xl">
-          The next-generation scripting language designed to
-          simplify and enhance your programming experience.
-        </p>
-        <p class="mb-10 max-w-2xl">
-          VisionScript is crafted with a focus on usability,
-          reliability, and functionality, making it the perfect
-          tool for developers of all skill levels.
-        </p>
-        <p class="mb-10 max-w-2xl">
-          Key Features of visionScript includes:
-        </p>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
-          <li
-            class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-3 duration-500 hover:shadow-[4px_4px_0_#000]">
-            <img src="images/code.png" alt="" class="w-20 mt-3" />
-
-            <p class="text-gray-600 text-sm">
-              <i class="fa-solid fa-arrow-right"></i>
-              User-Friendly Syntax
-              <br />
-              <i class="fa-solid fa-arrow-right"></i> Powerful
-              Scripting Capabilities
-              <br />
-              <i class="fa-solid fa-arrow-right"></i>
-              Reliability at Its Core
-            </p>
-          </li>
-          <li
-            class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-3 duration-500 hover:shadow-[4px_4px_0_#000]">
-            <img src="images/edu.png" alt="" class="w-20 mt-3" />
-
-            <p class="text-gray-600 text-sm">
-              <i class="fa-solid fa-arrow-right"></i>
-              Extensive Built-in Functions
-              <br />
-              <i class="fa-solid fa-arrow-right"></i>
-              Optimized Performance
-              <br />
-              <i class="fa-solid fa-arrow-right"></i> Rich
-              Documentation
-            </p>
-          </li>
-        </ul>
+      <div class="feature">
+        <h3>Collaborative Coding</h3>
+        <p>Work together with your peers seamlessly through our collaborative coding environment.</p>
+      </div>
+      <div class="feature">
+        <h3>Cross-Platform</h3>
+        <p>VisionScript works across platforms, allowing you to code on any device, anywhere in the world.</p>
+      </div>
+      <div class="feature">
+        <h3>Enhanced Security</h3>
+        <p>Your code is safe with us, as we use the latest encryption technologies to protect your work.</p>
       </div>
     </div>
-  </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 VisionScript. All Rights Reserved.</p>
+  </footer>
 
   <script>
-    const togglebtn = document.querySelector(".toggle-button");
-    const dropdown = document.querySelector(".dropdown-menu");
-    const nav = document.querySelector("nav");
-
-    togglebtn.addEventListener("click", () => {
-      dropdown.classList.toggle("top-16");
-    });
-
-    window.onscroll = () => {
-      const nav = document.querySelector("nav");
-      if (window.pageYOffset > 50) {
-        nav.style.background = "#203a43"; // Solid color on scroll
-        nav.style.padding = "0.75rem 2rem";
-        nav.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.2)";
+    // Scroll effect for the navbar
+    window.onscroll = function () {
+      const nav = document.querySelector('nav');
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        nav.classList.add('scrolled');
       } else {
-        nav.style.background = "rgba(255, 255, 255, 0.1)"; // Semi-transparent white
-        nav.style.padding = "1rem 2rem";
-        nav.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+        nav.classList.remove('scrolled');
       }
     };
   </script>
