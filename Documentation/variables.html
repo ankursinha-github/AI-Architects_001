@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation - Variables</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="tutorials">
+            <h1>Documentation</h1>
+            <ul>
+                <li>
+                    <a href="introduction.html">Introduction</a>
+                </li>
+                <li><a href="variables.html">Variables</a></li>
+                <li><a href="arrays.html">Array</a></li>
+                <li><a href="strings.html">String</a></li>
+                <li><a href="conditionalOperator.html">Conditional Operator</a></li>
+                <li><a href="loops.html">Loop</a></li>
+                <li><a href="integerFunctions.html">Integer Functions</a></li>
+                <li><a href="hof.html">Higher Order Functions</a></li>
+                <li><a href="specialFunctions.html">Special Functions</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h2>Custom Variable Declarations: blo, glo, and fix</h2>
+
+            <p>
+                In our new programming language, we introduce custom keywords to
+                declare variables with specific scopes and mutability. These keywords
+                are designed to simplify the declaration process while making the code
+                more readable and intuitive.
+            </p>
+
+            <p>VisionScript Variables can be declared in 4 ways:</p>
+
+            <ul>
+                <li>Automatically</li>
+                <li>Using blo</li>
+                <li>Using glo</li>
+                <li>Using fix</li>
+            </ul>
+
+            <h2>1. blo (Block-scoped, Mutable)</h2>
+            <b>Equivalent to:</b>
+            <p>let</p>
+            <b>Description: </b><span>Use</span>
+            <p>blo</p>
+
+            <p>
+                to declare variables that are block-scoped and mutable. These
+                variables are confined to the block in which they are defined and can
+                be reassigned within that block.
+            </p>
+
+            <div class="code_block">
+                <div class="code_head">
+                    <h3>Pyonic</h3>
+                    <div class="btns">
+                        <button onclick="copyToClipboard(this)">Copy</button>
+                        <button>Try Yourself</button>
+                    </div>
+                </div>
+                <pre class="code_body">
+                    <code class="code" id="codeContent">
+                        <span class="keyword">blo</span> count = <span class="number">10</span>;
+                        <span class="keyword">if</span> (count <span class="operator">&gt;</span> <span class="number">5</span>) {
+                            <span class="keyword">blo</span> message = <span class="string">"Count is greater than 5"</span>;
+                            <span class="function">console.log</span>(message);  <span class="comment">// Output: Count is greater than 5</span>
+                        }
+                        <span class="function">console.log</span>(message);  <span class="comment">// Error: message is not defined (because it's block-scoped)</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
