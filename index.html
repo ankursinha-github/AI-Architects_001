@@ -1,121 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <div
-      class="w-full h-screen bg-cover bg-center bg-fixed text-white"
-      style="background-image: url('images/bg.jpeg')"
-    >
-      <header class="bg-black lg:fixed lg:top-0 lg:left-0 lg:w-full">
-        <nav class="flex items-center justify-between px-12 h-16 lg:gap-28">
-          <a href="#" class="text-2xl font-bold">Nandkishore</a>
-          <div
-            class="dropdown-menu absolute -top-full left-0 max-lg:bg-[#FFFFFF30] w-full flex flex-col gap-6 items-center py-2 text-lg font-bold lg:static lg:flex-row lg:justify-between"
-          >
-            <ul class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8">
-              <li class="hover:text-orange-400 cursor-pointer"><a href="index.html
-                ">Home</a></li>
-              <li class="hover:text-orange-400 cursor-pointer"> <a href=""></a>Editor</li>
-              <li class="hover:text-orange-400 cursor-pointer"><a href="/AI-Architects_001/Documentation/introduction.html">Documentation</a>
-                
-              </li>
-              <li class="hover:text-orange-400 cursor-pointer"><a href="page/our Team/ourTeam.html">Our Team</a></li>
-            </ul>
-            <div class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8">
-              <button class="hover:text-orange-300 cursor-pointer">
-               <a href="loginAuth/login.html">Login</a> 
-              </button>
-              <button
-                class="bg-orange-500 rounded-lg px-2 py-1 hover:text-orange-100 cursor-pointer"
-              >
-                Sign Up
-              </button>
-            </div>
-          </div>
-          <div class="toggle-button lg:hidden">
-            <i class="fa-solid fa-bars fa-lg"></i>
-          </div>
-        </nav>
-      </header>
-    </div>
-
-    <!-- about us  -->
-
-    <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
-        <h4 class="text-center mb-2 text-lg">About Us</h4>
-        <h2 class="text-center text-5xl">Welcome to VisionScript</h2>
-        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
-          <div class="max-w-max mx-auto relative">
-            <img
-              class="w-full h-80 sm:w-full rounded-3xl max-w-none"
-              src="images/programming.jpg"
-              alt=""
-            />
-          </div>
-          <div class="flex-1">
-            <p class="mb-10 max-w-2xl">
-                The next-generation scripting language designed to simplify and enhance your programming experience.
-            </p>
-            <p class="mb-10 max-w-2xl">
-                VisionScript is crafted with a focus on usability, reliability, and functionality, making it the perfect tool for developers of all skill levels.
-</p>
-            <p class="mb-10 max-w-2xl">
-                Key Features of visionScript includes:
-            </p>
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
-              <li
-                class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-3 duration-500 hover:shadow-[4px_4px_0_#000]"
-              >
-                <img src="images/code.png" alt="" class="w-20 mt-3" />
-  
-                <p class="text-gray-600 text-sm">
-                    <i class="fa-solid fa-arrow-right"></i> User-Friendly Syntax
-                       <br>
-                       <i class="fa-solid fa-arrow-right"></i>  Powerful Scripting Capabilities
-                    <br>
-                    <i class="fa-solid fa-arrow-right"></i>    Reliability at Its Core
-                    
-                   
-                </p>
-              </li>
-              <li
-                class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-3 duration-500 hover:shadow-[4px_4px_0_#000]"
-              >
-                <img src="images/edu.png" alt="" class="w-20 mt-3" />
-  
-                <p class="text-gray-600 text-sm"> <i class="fa-solid fa-arrow-right"></i> Extensive Built-in Functions
-                    <br>
-                    <i class="fa-solid fa-arrow-right"></i>   Optimized Performance
-                    <br>
-                  <i class="fa-solid fa-arrow-right"></i>  Rich Documentation</p>
-              </li>
-             
-            </ul>
-            
-          </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="tailwind.config.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div
+            class="w-full h-screen bg-cover bg-center bg-fixed text-white"
+            style="background-image: url('images/bg.jpeg')"
+        >
+            <header class="bg-black lg:fixed lg:top-0 lg:left-0 lg:w-full">
+                <nav
+                    class="flex items-center justify-between px-12 h-16 lg:gap-28"
+                >
+                    <a href="#" class="text-2xl font-bold">Nandkishore</a>
+                    <div
+                        class="dropdown-menu absolute -top-full left-0 max-lg:bg-[#FFFFFF30] w-full flex flex-col gap-6 items-center py-2 text-lg font-bold lg:static lg:flex-row lg:justify-between"
+                    >
+                        <ul
+                            class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8"
+                        >
+                            <li class="hover:text-orange-400 cursor-pointer">
+                                <a
+                                    href="index.html
+                "
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="hover:text-orange-400 cursor-pointer">
+                                <a href="./editor/index.html">Editor</a>
+                            </li>
+                            <li class="hover:text-orange-400 cursor-pointer">
+                                <a
+                                    href="/AI-Architects_001/Documentation/introduction.html"
+                                    >Documentation</a
+                                >
+                            </li>
+                            <li class="hover:text-orange-400 cursor-pointer">
+                                <a href="page/our Team/ourTeam.html"
+                                    >Our Team</a
+                                >
+                            </li>
+                        </ul>
+                        <div
+                            class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8"
+                        >
+                            <button
+                                class="hover:text-orange-300 cursor-pointer"
+                            >
+                                <a href="loginAuth/login.html">Login</a>
+                            </button>
+                            <button
+                                class="bg-orange-500 rounded-lg px-2 py-1 hover:text-orange-100 cursor-pointer"
+                            >
+                                Sign Up
+                            </button>
+                        </div>
+                    </div>
+                    <div class="toggle-button lg:hidden">
+                        <i class="fa-solid fa-bars fa-lg"></i>
+                    </div>
+                </nav>
+            </header>
         </div>
-      </div>
 
-    <script>
-      const togglebtn = document.querySelector(".toggle-button");
-      const dropdown = document.querySelector(".dropdown-menu");
+        <!-- about us  -->
 
-      togglebtn.addEventListener("click", () => {
-        dropdown.classList.toggle("top-16");
-      });
-    </script>
-  </body>
+        <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+            <h4 class="text-center mb-2 text-lg">About Us</h4>
+            <h2 class="text-center text-5xl">Welcome to VisionScript</h2>
+            <div
+                class="flex w-full flex-col lg:flex-row items-center gap-20 my-20"
+            >
+                <div class="max-w-max mx-auto relative">
+                    <img
+                        class="w-full h-80 sm:w-full rounded-3xl max-w-none"
+                        src="images/programming.jpg"
+                        alt=""
+                    />
+                </div>
+                <div class="flex-1">
+                    <p class="mb-10 max-w-2xl">
+                        The next-generation scripting language designed to
+                        simplify and enhance your programming experience.
+                    </p>
+                    <p class="mb-10 max-w-2xl">
+                        VisionScript is crafted with a focus on usability,
+                        reliability, and functionality, making it the perfect
+                        tool for developers of all skill levels.
+                    </p>
+                    <p class="mb-10 max-w-2xl">
+                        Key Features of visionScript includes:
+                    </p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+                        <li
+                            class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-3 duration-500 hover:shadow-[4px_4px_0_#000]"
+                        >
+                            <img
+                                src="images/code.png"
+                                alt=""
+                                class="w-20 mt-3"
+                            />
+
+                            <p class="text-gray-600 text-sm">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                User-Friendly Syntax
+                                <br />
+                                <i class="fa-solid fa-arrow-right"></i> Powerful
+                                Scripting Capabilities
+                                <br />
+                                <i class="fa-solid fa-arrow-right"></i>
+                                Reliability at Its Core
+                            </p>
+                        </li>
+                        <li
+                            class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-3 duration-500 hover:shadow-[4px_4px_0_#000]"
+                        >
+                            <img
+                                src="images/edu.png"
+                                alt=""
+                                class="w-20 mt-3"
+                            />
+
+                            <p class="text-gray-600 text-sm">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                Extensive Built-in Functions
+                                <br />
+                                <i class="fa-solid fa-arrow-right"></i>
+                                Optimized Performance
+                                <br />
+                                <i class="fa-solid fa-arrow-right"></i> Rich
+                                Documentation
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const togglebtn = document.querySelector(".toggle-button");
+            const dropdown = document.querySelector(".dropdown-menu");
+
+            togglebtn.addEventListener("click", () => {
+                dropdown.classList.toggle("top-16");
+            });
+        </script>
+    </body>
 </html>
