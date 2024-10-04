@@ -244,6 +244,19 @@ button:hover {
     transform: scale(1.03);
 }
 
+#queryForm{
+    width: 700px;
+
+}
+
+
+form{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
 @media (max-width: 768px) {
     #main3 {
         grid-template-columns: 1fr;
@@ -256,6 +269,11 @@ button:hover {
     #getInTouch p {
         font-size: 0.9rem;
     }
+
+    #queryForm{
+        width: 80%;
+    }
+    
 }
 
 /* Styling for footer */
