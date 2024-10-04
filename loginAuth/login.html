@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Login</h1>
     <form id="loginForm">
         <div class="form-group">
             <label for="email">Email Address <span style="color: red;">*</span></label>
@@ -84,4 +86,74 @@ function loginfn(){
 
 document.getElementById("loginForm").addEventListener("submit", loginfn);
 
-</script>
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" required>
+
+                <label for="password">Password <span class="required">*</span></label>
+                <input type="password" id="password" required minlength="8" maxlength="16">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="newsletter" required>
+                <label for="newsletter">I would like to stay up to date with adidas. I agree to receive personalized marketing messages from adidas India Marketing Pvt. Ltd.</label>
+                <br><label><a href="login.html">Read More</a></label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I have read and accepted the <a href="#">terms & conditions</a> and the <a href="#">privacy policy</a>.</label>
+            </div>
+            <div class="form-buttons">
+                <input type="submit" value="Continue" class="button">
+                <div class="btn-back">Back</div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function loginfn(event){
+            event.preventDefault();
+            const username = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            const api = "AIzaSyDHO9-l6UOCnT2HN7EdAJczOb3Se8LDTQY";
+
+            const raw = JSON.stringify({
+                "email": username,
+                "password": password
+            });
+
+            const requestOptions = {
+                method: "POST",
+                body: raw,
+                redirect: "follow",
+            };
+
+            fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${api}`, requestOptions)
+            .then((response) => response.json())
+            .then((result) => {
+                result.idToken
+                ? (alert("Welcome Back, We Missed You 🥹"),
+                localStorage.setItem("idToken", result.idToken),
+                (window.location.href = "./index.html"))
+                : alert("Invalid credentials. Please try again.");
+            })
+            .catch((error) => console.log("error", error));
+        }
+
+        document.getElementById("loginForm").addEventListener("submit", loginfn);
+    </script>
+</body>
+</html>

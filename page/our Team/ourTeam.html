@@ -8,7 +8,305 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="ourTeam.css">
+    <!-- <link rel="stylesheet" href="ourTeam.css"> -->
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        main,
+        section,
+        footer {
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Navigation styling (add later if you have navigation) */
+        nav {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #f4f4f4;
+            border-bottom: 2px solid #f4f4f4;
+        }
+
+        /* Our Team Header Section */
+        #ourTeamImg1 {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #ourTeamImg1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+        }
+
+        #ourTeamGlassy {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #ourTeamGlassyH1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        #ourTeamGlassyH1 span {
+            color: #00aaff;
+        }
+
+        /* Meet Our Team Section */
+        section h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        section h1 span {
+            color: #00aaff;
+        }
+
+        #ourTeamMain2 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .childCard {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .childCard:hover {
+            transform: translateY(-10px);
+        }
+
+        .childCard .teamImage img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .ourTeamNaming h2 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .ourTeamNaming h2 span i {
+            margin-left: 10px;
+            color: #0077b5;
+        }
+
+        .ourTeamNaming h2:hover {
+            color: #00aaff;
+        }
+
+        .ourTeamNaming h2 span i:hover {
+            color: #0077b5;
+        }
+
+        /* Get in Touch Section */
+        #getInTouch {
+            padding: 50px;
+            background: linear-gradient(135deg, #00aaff, #005f8a);
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #getInTouch h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        .contact-item i {
+            font-size: 1.8rem;
+            color: #ffdfb0;
+        }
+
+        .contact-item strong {
+            color: #ffdfb0;
+        }
+
+        /* Query Form */
+        #queryForm {
+            padding: 50px;
+            background-color: #fff;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        #queryForm h2 {
+            color: #333;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00aaff;
+        }
+
+        button {
+            background-color: #00aaff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0077b5;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        #footer_top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+        }
+
+        #footer_left,
+        #footer_right {
+            width: 45%;
+            text-align: left;
+        }
+
+        #footer_left div,
+        #footer_right div {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #00aaff;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        #footer_right h3 {
+            text-align: center;
+        }
+
+        #footer_right div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #footer_right input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+        }
+
+        #footer_right a {
+            display: block;
+            margin-top: 10px;
+            background-color: #00aaff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        #footer_right a:hover {
+            background-color: #0077b5;
+        }
+
+        #footer_bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid #444;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+
+            #footer_left,
+            #footer_right {
+                width: 100%;
+                text-align: center;
+            }
+
+            #ourTeamMain2 {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -68,7 +366,7 @@
                 <img src="../../assects/profile/prakash.jpg" alt="" class="profileImg">
             </div>
             <div class="ourTeamNaming">
-                <h2 style="text-align: center;padding: 10px;">Shashank Sinha  <span> <i
+                <h2 style="text-align: center;padding: 10px;">Shashank Sinha <span> <i
                             class="fa-brands fa-linkedin"></i></span></h2>
             </div>
         </div>
@@ -113,7 +411,7 @@
     <!-- Query Section -->
     <section id="queryForm" class="fade-in">
         <h2>Contact <span>US</span></h2>
-        <form action="#" method="POST" >
+        <form action="#" method="POST">
             <div class="form-group">
                 <!-- <label for="name">Name:</label> -->
                 <input type="text" id="name" name="name" required placeholder="Enter your name">
@@ -131,7 +429,8 @@
 
             <div class="form-group">
                 <!-- <label for="message">Message:</label> -->
-                <textarea id="message" name="message" rows="5" required placeholder="Enter your message here"></textarea>
+                <textarea id="message" name="message" rows="5" required
+                    placeholder="Enter your message here"></textarea>
             </div>
 
             <button type="submit" class="hover-effect">Submit</button>
