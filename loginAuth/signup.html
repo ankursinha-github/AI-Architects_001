@@ -22,9 +22,8 @@
         </div>
         <div class="form-group">
             <input type="checkbox" id="newsletter" required>
-            <label for="newsletter"><span style="font-weight: 600; font-size: 15px; ">I would like to stay up to date with adidas. I agree to receive
-            personalized
-            marketing messages from adidas India Marketing Pvt. Ltd.</span></label>
+            <label for="newsletter"><span style="font-weight: 600; font-size: 15px; ">I would like to stay up to date with changing technology. I agree to receive
+            personalized messages from CloneScript.</span></label>
             <br><label><a href="login.html"><span style="font-size: 14px;">Read More</span></a></label>
         </div>
         <div class="form-group">
@@ -85,7 +84,7 @@
         fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${api}`, requestOptions)
             .then((response) => response.json())
             .then((result) => {
-                alert("Welcome To Adiclub 🥳")
+                alert("Welcome To CloneScript")
                     window.location.href = "login.html"
             })
             .catch((error) => console.error(error));
