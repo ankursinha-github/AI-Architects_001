@@ -25,7 +25,6 @@
     h5,
     h6 {
       font-weight: 600;
-      /* color: #203a43; */
       margin: 0;
     }
 
@@ -80,6 +79,10 @@
       transition: all 0.3s ease;
     }
 
+    nav a:hover, nav a {
+      text-decoration: none;
+    }
+
     nav.scrolled {
       background: #203a43;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -121,6 +124,11 @@
       gap: 10px;
     }
 
+    .nav-buttons a {
+      text-decoration: none;
+      color: white;
+    }
+
     .nav-buttons .btn {
       padding: 0.6rem 1.2rem;
       border-radius: 5px;
@@ -152,8 +160,11 @@
 
     .nav-buttons .btn-login:hover {
       background-color: #ffffff;
-      color: #ff416c;
       transform: translateY(-3px);
+    }
+
+    .nav-buttons .btn-login:hover a {
+      color: #ff416c;
     }
 
     /* Responsive Design */
@@ -311,16 +322,17 @@
   <div class="hero">
     <header class="lg:fixed lg:top-0 lg:left-0 lg:w-full">
       <nav class="flex items-center justify-between px-12 h-16 lg:gap-28">
-        <a href="#" class="logo">VisionScript</a>
+        <a href="#" class="logo">CloneScript</a>
         <ul class="flex items-center gap-8">
           <li class="hover:text-orange-400 cursor-pointer"><a href="index.html">Home</a></li>
           <li class="hover:text-orange-400 cursor-pointer"><a href="editor/index.html">Editor</a></li>
-          <li class="hover:text-orange-400 cursor-pointer"><a href="Documentation/introduction.html">Documentation</a></li>
+          <li class="hover:text-orange-400 cursor-pointer"><a href="Documentation/introduction.html">Documentation</a>
+          </li>
           <li class="hover:text-orange-400 cursor-pointer"><a href="page/our Team/ourTeam.html">Our Team</a></li>
         </ul>
         <div class="nav-buttons">
-          <button class="btn btn-login">Login</button>
-          <button class="btn btn-signup">Signup</button>
+          <button class="btn btn-login"><a href="./loginAuth/login.html">Login</a></button>
+          <button class="btn btn-signup"><a href="./loginAuth/signup.html">Signup</a></button>
         </div>
       </nav>
     </header>
