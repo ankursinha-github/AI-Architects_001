@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Documentation - Strings</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <nav class="flex items-center justify-between px-12 h-16 lg:gap-28">
-        <a href="#" class="logo">CloneScript</a>
-        <ul class="flex items-center gap-8">
-            <li class="hover:text-orange-400 cursor-pointer"><a href="/AI-Architects_001/index.html">Home</a></li>
-            <li class="hover:text-orange-400 cursor-pointer"><a href="/AI-Architects_001/editor/index.html">Editor</a></li>
-            <li class="hover:text-orange-400 cursor-pointer"><a href="introduction.html">Documentation</a></li>
-            <li class="hover:text-orange-400 cursor-pointer"><a href="/AI-Architects_001/page/our Team/ourTeam.html">Our Team</a></li>
+    <nav>
+        <div class="logo">CloneScript</div>
+        <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        <ul>
+            <li><a href="/AI-Architects_001/index.html">Home</a></li>
+            <li><a href="/AI-Architects_001/editor/editor.html">Editor</a></li>
+            <li><a href="/AI-Architects_001/Documentation/introduction.html">Documentation</a></li>
+            <li><a href="/AI-Architects_001/page/our Team/ourTeam.html">Our Team</a></li>
         </ul>
         <div class="nav-buttons">
-            <button class="btn btn-login"><a href="../loginAuth/login.html">Login</a></button>
-            <button class="btn btn-signup"><a href="../loginAuth/signup.html">Signup</a></button>
+            <button class="btn btn-login"><a href="/AI-Architects_001/loginAuth/login.html">Login</a></button>
+            <button class="btn btn-signup"><a href="/AI-Architects_001/loginAuth/signup.html">Sign Up</a></button>
         </div>
     </nav>
 
@@ -44,28 +48,20 @@
             <h2>Strings</h2>
 
             <p>
-                In Bhai Language, strings are a sequence of characters used to represent text. Strings are a fundamental
-                data type and can be manipulated using various methods and properties designed to handle text
-                efficiently.
+                Pyonic Language is a fun, intuitive, and beginner-friendly programming language designed to
+                simplify coding concepts while making learning engaging and enjoyable. It's inspired by real-world
+                expressions and is built to bring a conversational style to programming. Pyonic Language blends
+                elements from popular languages like JavaScript and Python, combining their best features with unique
+                syntax and functionality tailored to make programming accessible to everyone—from complete beginners to
+                seasoned developers.
             </p>
 
-            <h2>String Methods</h2>
-
-            <ol>
-                <li>string.vowelCount() - counts the number of vowels in a string</li>
-                <li>string.consonantCount() - counts the number of consonants in a string</li>
-                <li>string.wordCount() - counts the number of words in a string</li>
-                <li>string.characterFrequency() - returns a frequency map of characters in a string</li>
-                <li>string.isAnagram() - checks if two strings are anagrams of each other</li>
-            </ol>
-
-            <h3>string.vowelCount()</h3>
             <div class="code_block">
                 <div class="code_head">
                     <h3>Pyonic</h3>
                     <div class="btns">
                         <button onclick="copyToClipboard(this)">Copy</button>
-                        <button>Try Yourself</button>
+                        <button><a href="../editor/editor.html">Try Yourself</a></button>
                     </div>
                 </div>
                 <pre class="code_body">
@@ -80,55 +76,24 @@
                 </pre>
             </div>
 
-            <h3>string.consonantCount()</h3>
-            <div class="code_block">
-                <div class="code_head">
-                    <h3>Pyonic</h3>
-                    <div class="btns">
-                        <button onclick="copyToClipboard(this)">Copy</button>
-                        <button>Try Yourself</button>
-                    </div>
-                </div>
-                <pre class="code_body">
-                    <code class="code" id="codeContent">
-                        <span class="keyword">blo</span> count = <span class="number">10</span>;
-                        <span class="keyword">if</span> (count <span class="operator">&gt;</span> <span class="number">5</span>) {
-                            <span class="keyword">blo</span> message = <span class="string">"Count is greater than 5"</span>;
-                            <span class="function">console.log</span>(message);  <span class="comment">// Output: Count is greater than 5</span>
-                        }
-                        <span class="function">console.log</span>(message);  <span class="comment">// Error: message is not defined (because it's block-scoped)</span>
-                    </code>
-                </pre>
-            </div>
+            <h2>Key Features of Pyonic Language</h2>
 
-            <h3>string.wordCount()</h3>
-            <div class="code_block">
-                <div class="code_head">
-                    <h3>Pyonic</h3>
-                    <div class="btns">
-                        <button onclick="copyToClipboard(this)">Copy</button>
-                        <button>Try Yourself</button>
-                    </div>
-                </div>
-                <pre class="code_body">
-                    <code class="code" id="codeContent">
-                        <span class="keyword">blo</span> count = <span class="number">10</span>;
-                        <span class="keyword">if</span> (count <span class="operator">&gt;</span> <span class="number">5</span>) {
-                            <span class="keyword">blo</span> message = <span class="string">"Count is greater than 5"</span>;
-                            <span class="function">console.log</span>(message);  <span class="comment">// Output: Count is greater than 5</span>
-                        }
-                        <span class="function">console.log</span>(message);  <span class="comment">// Error: message is not defined (because it's block-scoped)</span>
-                    </code>
-                </pre>
-            </div>
+            <p>Readable Syntax: Pyonic Language uses a syntax that is easy to understand and remember. It
+                emphasizes natural language-like commands, making it approachable for those new to programming.</p>
 
-            <h2>Conclusion</h2>
+            <p>Built-in Polyfills and Helpers: Pyonic Language comes with a rich set of polyfills and helper
+                functions, making it powerful yet easy to use. Examples include PyonicEvery, PyonicConcat,
+                Pyonic Includes, and more, which mirror the functionality of JavaScript methods with a twist.</p>
 
-            <p>Strings in Bhai Language are versatile and provide numerous methods to manipulate and format text. With
-                built-in support for operations like searching, slicing, and case conversion, working with strings
-                becomes intuitive and efficient, making Bhai Language powerful for text processing tasks.</p>
+            <p>Interactive Programming Style: The language encourages interactive and exploratory programming, making it
+                suitable for educational purposes and live coding demonstrations. Community and Fun: Pyonic
+                Language fosters a sense of community and fun, encouraging collaboration, creativity, and a
+                light-hearted approach to coding. It is perfect for those who want to learn programming with a smile.
+            </p>
         </div>
     </div>
+
+    <button class="scroll-to-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>

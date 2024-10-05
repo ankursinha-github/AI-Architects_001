@@ -21,11 +21,34 @@ function copyToClipboard(button) {
     });
 }
 
+// Scroll effect for the navbar
 window.onscroll = function () {
-    const nav = document.querySelector('nav');
+    const nav = document.querySelector("nav");
+    const scrollButton = document.querySelector(".scroll-to-top");
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        nav.classList.add('scrolled');
+        nav.classList.add("scrolled");
+        scrollButton.style.display = "block"; // Show scroll to top button
     } else {
-        nav.classList.remove('scrolled');
+        nav.classList.remove("scrolled");
+        scrollButton.style.display = "none"; // Hide scroll to top button
     }
 };
+
+// Toggle hamburger menu
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    nav.classList.toggle("active");
+}
+
+// Toggle between light and dark themes
+function toggleTheme() {
+    const body = document.body;
+    body.classList.toggle("dark");
+    const themeButton = document.querySelector(".nav-buttons .btn-signup");
+    themeButton.textContent = body.classList.contains("dark") ? "Light Theme" : "Dark Theme";
+}
+
+// Scroll to top function
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
