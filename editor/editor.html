@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Editor</title>
+        <link rel="stylesheet" href="./editor.css" />
+    </head>
+    <body>
+        <div>
+            <h2 id="h2">
+                <i
+                    class="fa-solid fa-c"
+                    style="color: #5500aa; margin-right: 1px"
+                ></i>
+                CloneScript Editor
+            </h2>
+        </div>
+
+        <div class="container">
+            <div class="left">
+                <label for="html-code" class="editor-label">
+                    <i class="fa-brands fa-html5" style="color: #cc3419"></i>
+                    HTML
+                </label>
+                <textarea id="html-code" class="language-html"></textarea>
+
+                <label for="css-code" class="editor-label">
+                    <i class="fa-brands fa-css3-alt" style="color: #5c6db9"></i>
+                    CSS
+                </label>
+                <textarea id="css-code" class="language-css"></textarea>
+
+                <label for="js-code" class="editor-label">
+                    <i class="fa-solid fa-c" style="color: #5500aa"></i>
+                    CloneScript
+                </label>
+                <textarea id="js-code" class="language-javascript"></textarea>
+            </div>
+
+            <div class="resizer" id="resizer"></div>
+
+            <div class="right">
+                <label for="output" class="editor-label">
+                    <i class="fa-solid fa-play" style="color: #007419"></i>
+                    Output
+                </label>
+                <iframe id="output"></iframe>
+
+                <!-- Removed incorrect label for console -->
+                <p id="conso" for="console">Console</p>
+                <div class="console" id="console"></div>
+            </div>
+        </div>
+
+        <script src="./functions2.js"></script>
+
+        <script src="./functions.js"></script>
+
+        <!-- font-awesome -->
+        <script
+            src="https://kit.fontawesome.com/ee184e410d.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

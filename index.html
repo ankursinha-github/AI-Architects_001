@@ -8,7 +8,17 @@
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>CloneScript Programming Language</title>
+
   <style>
+    /* Global Styling */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
     /* Global Styling */
     body {
       margin: 0;
@@ -32,7 +42,7 @@
     .hero {
       position: relative;
       height: 100vh;
-      background-image: url('images/bg.jpeg');
+      background-image: url("images/bg.jpeg");
       background-size: cover;
       background-position: center;
       display: flex;
@@ -79,7 +89,8 @@
       transition: all 0.3s ease;
     }
 
-    nav a:hover, nav a {
+    nav a:hover,
+    nav a {
       text-decoration: none;
     }
 
@@ -324,41 +335,69 @@
       <nav class="flex items-center justify-between px-12 h-16 lg:gap-28">
         <a href="#" class="logo">CloneScript</a>
         <ul class="flex items-center gap-8">
-          <li class="hover:text-orange-400 cursor-pointer"><a href="index.html">Home</a></li>
-          <li class="hover:text-orange-400 cursor-pointer"><a href="editor/index.html">Editor</a></li>
-          <li class="hover:text-orange-400 cursor-pointer"><a href="Documentation/introduction.html">Documentation</a>
+          <li class="hover:text-orange-400 cursor-pointer">
+            <a href="index.html">Home</a>
           </li>
-          <li class="hover:text-orange-400 cursor-pointer"><a href="page/our Team/ourTeam.html">Our Team</a></li>
+          <li class="hover:text-orange-400 cursor-pointer">
+            <a href="editor/editor.html">Editor</a>
+          </li>
+          <li class="hover:text-orange-400 cursor-pointer">
+            <a href="Documentation/introduction.html">Documentation</a>
+          </li>
+          <li class="hover:text-orange-400 cursor-pointer">
+            <a href="page/our Team/ourTeam.html">Our Team</a>
+          </li>
         </ul>
         <div class="nav-buttons">
-          <button class="btn btn-login"><a href="./loginAuth/login.html">Login</a></button>
-          <button class="btn btn-signup"><a href="./loginAuth/signup.html">Signup</a></button>
+          <button class="btn btn-login">
+            <a href="./loginAuth/login.html">Login</a>
+          </button>
+          <button class="btn btn-signup">
+            <a href="./loginAuth/signup.html">Signup</a>
+          </button>
         </div>
       </nav>
     </header>
     <h1>Empower Your Coding Journey</h1>
-    <p>Join us today and unlock the power of coding with VisionScript!</p>
+    <p>
+      Join us today and unlock the power of coding with VisionScript!
+    </p>
   </div>
 
   <section id="about">
     <h2>Welcome to VisionScript</h2>
-    <p>The next-generation scripting language designed to simplify and enhance your programming experience.</p>
+    <p>
+      The next-generation scripting language designed to simplify and
+      enhance your programming experience.
+    </p>
     <div class="about-features">
       <div class="feature">
         <h3>Real-Time Compilation</h3>
-        <p>Experience instant feedback on your code with our real-time compilation feature.</p>
+        <p>
+          Experience instant feedback on your code with our
+          real-time compilation feature.
+        </p>
       </div>
       <div class="feature">
         <h3>Collaborative Coding</h3>
-        <p>Work together with your peers seamlessly through our collaborative coding environment.</p>
+        <p>
+          Work together with your peers seamlessly through our
+          collaborative coding environment.
+        </p>
       </div>
       <div class="feature">
         <h3>Cross-Platform</h3>
-        <p>VisionScript works across platforms, allowing you to code on any device, anywhere in the world.</p>
+        <p>
+          VisionScript works across platforms, allowing you to
+          code on any device, anywhere in the world.
+        </p>
       </div>
       <div class="feature">
         <h3>Enhanced Security</h3>
-        <p>Your code is safe with us, as we use the latest encryption technologies to protect your work.</p>
+        <p>
+          Your code is safe with us, as we use the latest
+          encryption technologies to protect your work.
+        </p>
       </div>
     </div>
   </section>
@@ -370,11 +409,14 @@
   <script>
     // Scroll effect for the navbar
     window.onscroll = function () {
-      const nav = document.querySelector('nav');
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        nav.classList.add('scrolled');
+      const nav = document.querySelector("nav");
+      if (
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+      ) {
+        nav.classList.add("scrolled");
       } else {
-        nav.classList.remove('scrolled');
+        nav.classList.remove("scrolled");
       }
     };
   </script>
