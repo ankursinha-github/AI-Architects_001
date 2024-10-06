@@ -17,29 +17,27 @@
             <label for="password">Password <span style="color: red;">*</span></label>
             <input type="password" id="password" required min="8" max="16">
         </div>
-        <div class="form-group">
-            <input type="checkbox" id="newsletter" required >
-            <label for="newsletter">I would like to stay up to date with adidas. I agree to receive
-                personalized
-                marketing messages from adidas India Marketing Pvt. Ltd.</label>
-            <br><label><a href="login.html">Read More</a></label>
+        <div class="form-group" >
+            <input type="checkbox" id="newsletter" required  >
+            <label for="newsletter"><span style="font-weight: 600; font-size: 15px; ">I would like to stay up to date with changing technology. I agree to receive
+            personalized messages from CloneScript.</span></label>
+            <br><label><a href="login.html"><span style="font-size: 14px;">Read More</span></a></label>
         </div>
         <div class="form-group">
             <input type="checkbox" id="terms" required >
-            <label for="terms">I have read and accepted the <a href="#">terms <span>&</span> conditions</a> and the <a
-                    href="#">privacy policy</a>.</label>
+            <label for="terms"><span style="font-weight: 600; font-size: 15px;">I have read and accepted the <a href="#">terms <span>&</span> conditions</a> and the <a href="#">privacy policy</a>.</span></label>
         </div>
 
 
 
         <div style="margin-top: 20px; padding: 10px;width: 500px; ">
             <input type="submit" value="Continue" class="yellow_container_btn2"
-                style=" background-color: black; color: white; margin-left: 8px; width: 98px; ">
+                style=" background-color: black; color: white; margin-left: -10px; width: 100px; ">
                 
 
                 
        
-            <div class="btn-back" style="margin-left: 15px; border: 1px solid black; width: 97px; height: 45px; margin-top: 5px;">
+            <!-- <div class="btn-back" style="margin-left: 15px; border: 1px solid black; width: 97px; height: 45px; margin-top: 5px;"> -->
             </div>
         </div>
     </form>
@@ -67,6 +65,7 @@ function loginfn(){
         redirect: "follow",
     };
     
+    // if cond is missing
     fetch(
         `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${api}`,
     requestOptions
@@ -74,7 +73,7 @@ function loginfn(){
 .then((response) => response.json())
 .then((result) => {
     result.idToken
-    ? (alert("Welcome Back, We Missed You 🥹"),
+    ? (alert("Welcome Back, Kick Start your coding journey"),
     localStorage.setItem("idToken", result.idToken),
     (window.location.href = "./index.html"))
     : alert("Invalid credentials. Please try again.");

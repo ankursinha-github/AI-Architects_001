@@ -1,3 +1,157 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EAD8B1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#signupForm{
+    background-color: #769bad;
+}
+#loginForm{
+        background-color: #769bad;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: #333;
+}
+
+/* Styling for buttons */
+button,
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #82a9d3;
+}
+
+/* Links inside forms */
+a {
+    /* color: #007BFF; */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles with Glassmorphism */
+form {
+    background: rgba(255, 255, 255, 0.2);
+    /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+    /* Blurs the background behind the form */
+    padding: 50px;
+    border-radius: 20px;
+    /* Softer edges */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px #001F3F;
+    /* Adds depth to the form */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* A subtle border */
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+label {
+    display: inline;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #001F3F;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Styling for the buttons in form */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Navigation buttons (Login and Signup) */
+.navigation-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.navigation-buttons a {
+    text-decoration: none;
+}
+
+.navigation-buttons button {
+    background-color: #007BFF;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+.navigation-buttons button:hover {
+    background-color: #0056b3;
+}
+
+#newsletter,
+#terms {
+    margin: 5px 0 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+
+    .navigation-buttons button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+=======
 /* Reset default styles */
 * {
     box-sizing: border-box;
@@ -103,3 +257,4 @@ a {
 a:hover {
     color: #0056b3;
 }
+
