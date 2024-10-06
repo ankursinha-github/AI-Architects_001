@@ -64,6 +64,7 @@ function loginfn(){
         redirect: "follow",
     };
     
+    // if cond is missing
     fetch(
         `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${api}`,
     requestOptions
