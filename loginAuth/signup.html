@@ -63,38 +63,56 @@
         const password = document.getElementById("password").value.trim();
         const confirmpassword = document.getElementById("cpassword").value.trim();
 
+        if (password === confirmpassword) {
 
+            const api = "AIzaSyDHO9-l6UOCnT2HN7EdAJczOb3Se8LDTQY";
 
-        const api = "AIzaSyDHO9-l6UOCnT2HN7EdAJczOb3Se8LDTQY";
-
-        const raw = JSON.stringify({
-            "email": username,
-            "password": password
-
-
-
-        });
+            const raw = JSON.stringify({
+                "email": username,
+                "password": password
 
 
 
+            });
 
 
 
-        const requestOptions = {
-            method: "POST",
-            body: raw,
-            redirect: "follow"
-        };
 
-        fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${api}`, requestOptions)
-            .then((response) => response.json())
-            .then((result) => {
-                alert("Welcome To CloneScript")
-                window.location.href = "login.html"
-            })
-            .catch((error) => console.error(error));
+
+
+            const requestOptions = {
+                method: "POST",
+                body: raw,
+                redirect: "follow"
+            };
+
+            fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${api}`, requestOptions)
+                .then((response) => response.json())
+                .then((result) => {
+                    alert("Welcome To CloneScript")
+                    window.location.href = "login.html"
+                })
+                .catch((error) => console.error(error));
+
+        }
+        else{
+            alert("Mismatch Password! Try Again")
+        }
+
+
+
+
     }
 
-    document.getElementById("signupForm").addEventListener("submit", signupfn);
+    document.getElementById("signupForm").addEventListener("submit", (e)=>{
+        e.preventDefault()
+        signupfn()
+    });
+
+
+
+
+
+
 
 </script>

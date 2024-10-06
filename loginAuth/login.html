@@ -78,7 +78,7 @@
                 result.idToken
                     ? (alert("Welcome Back, Kick Start your coding journey"),
                         localStorage.setItem("idToken", result.idToken),
-                        (window.location.href = "./index.html"))
+                        (window.location.href = "../index.html"))
                     : alert("Invalid credentials. Please try again.");
             })
             .catch((error) => console.log("error", error));
