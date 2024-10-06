@@ -1,13 +1,14 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Signup</h1>
     <form id="signupForm">
         <div class="form-group">
             <label for="email">Email Address <span style="color: red;">*</span></label>
@@ -23,14 +24,16 @@
         </div>
         <div class="form-group">
             <input type="checkbox" id="newsletter" required>
-            <label for="newsletter"><span style="font-weight: 600; font-size: 15px; ">I would like to stay up to date with changing technology. I agree to receive
-            personalized messages from CloneScript.</span></label>
+            <label for="newsletter"><span style="font-weight: 600; font-size: 15px; ">I would like to stay up to date
+                    with changing technology. I agree to receive
+                    personalized messages from CloneScript.</span></label>
             <br><label><a href="login.html"><span style="font-size: 14px;">Read More</span></a></label>
         </div>
         <div class="form-group">
             <input type="checkbox" id="terms" required>
-            <label for="terms"><span style="font-weight: 600; font-size: 15px; ">I have read and accepted the <a href="#">terms <span>&</span> conditions</a>
-            and the <a href="#">privacy policy</a>.</span></label>
+            <label for="terms"><span style="font-weight: 600; font-size: 15px; ">I have read and accepted the <a
+                        href="#">terms <span>&</span> conditions</a>
+                    and the <a href="#">privacy policy</a>.</span></label>
         </div>
 
 
@@ -48,6 +51,7 @@
         </div>
     </form>
 </body>
+
 </html>
 
 
@@ -59,7 +63,7 @@
         const password = document.getElementById("password").value.trim();
         const confirmpassword = document.getElementById("cpassword").value.trim();
 
-        
+
 
         const api = "AIzaSyDHO9-l6UOCnT2HN7EdAJczOb3Se8LDTQY";
 
@@ -68,13 +72,13 @@
             "password": password
 
 
-            
+
         });
 
 
-        
 
-        
+
+
 
         const requestOptions = {
             method: "POST",
@@ -86,78 +90,11 @@
             .then((response) => response.json())
             .then((result) => {
                 alert("Welcome To CloneScript")
-                    window.location.href = "login.html"
+                window.location.href = "login.html"
             })
             .catch((error) => console.error(error));
     }
 
     document.getElementById("signupForm").addEventListener("submit", signupfn);
 
-</script> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Signup</h1>
-        <form id="signupForm">
-            <div class="form-group">
-                <label for="email">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" required>
-
-                <label for="password">Password <span class="required">*</span></label>
-                <input type="password" id="password" required minlength="8" maxlength="16">
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="newsletter" required>
-                <label for="newsletter">I would like to stay up to date with adidas. I agree to receive personalized marketing messages from adidas India Marketing Pvt. Ltd.</label>
-                <br><label><a href="login.html">Read More</a></label>
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="terms" required>
-                <label for="terms">I have read and accepted the <a href="#">terms & conditions</a> and the <a href="#">privacy policy</a>.</label>
-            </div>
-            <div class="form-buttons">
-                <input type="submit" value="Continue" class="button">
-                <div class="btn-back">Back</div>
-            </div>
-        </form>
-    </div>
-    <script>
-        function signupfn(event) {
-            event.preventDefault();
-            const username = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value.trim();
-
-            const api = "AIzaSyDHO9-l6UOCnT2HN7EdAJczOb3Se8LDTQY";
-
-            const raw = JSON.stringify({
-                "email": username,
-                "password": password
-            });
-
-            const requestOptions = {
-                method: "POST",
-                body: raw,
-                redirect: "follow"
-            };
-
-            fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${api}`, requestOptions)
-                .then((response) => response.json())
-                .then((result) => {
-                    alert("Welcome To Adiclub 🥳");
-                    window.location.href = "login.html";
-                })
-                .catch((error) => console.error(error));
-        }
-
-        document.getElementById("signupForm").addEventListener("submit", signupfn);
-    </script>
-</body>
-</html>
+</script>
