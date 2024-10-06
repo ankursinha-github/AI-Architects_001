@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <link rel="stylesheet" href="./doc_style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="container text-end my-3 d-flex justify-content-between">
+        <div>
+        <a href="./index.html" style="color: #ffff; "><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="M226.67-186.67h140v-246.66h226.66v246.66h140v-380L480-756.67l-253.33 190v380ZM160-120v-480l320-240 320 240v480H526.67v-246.67h-93.34V-120H160Zm320-352Z"/></svg>
+      </a>  
+      </div>
+        <div>
+        <label for="themeToggle" class="form-label">Light/Dark Mode</label>
+        <input type="checkbox" id="themeToggle" class="form-check-input" />
+      </div>
+      </div>
+    </nav>
+    <div class="Cont_Aniket container-xxl">
+      <div>
+        <ul>
+          <h3>Tutorials</h3>
+          <li><a href="./Doc.html">Introduction</a></li>
+          <li><a href="./veriable.html">Variables</a></li>
+          <li><a href="./Array.html">Array</a></li>
+          <li><a href="./String.html">String</a></li>
+          <li><a href="Conditional.html">Conditional Operator</a></li>
+          <li><a href="loop.html">Loop</a></li>
+          <li><a href="./int_fun.html">Intrger Functions</a></li>
+          <li><a href="./highorde.html">Higher Order Functions</a></li>
+          <li><a href="./sp.html">Special Functions</a></li>
+        </ul>
+      </div>
+      <div>
+        <!-- New Content for For Loop in VisionScript -->
+        <h2>Simplified for Loop Syntax in VisionScript</h2>
+        <br />
+        <p>
+          In our new programming language, we've introduced a more intuitive and concise syntax for <code>for</code> loops. This simplified syntax reduces the need for manually specifying loop conditions and increments, making the code easier to write and understand.
+        </p>
+        <p>
+          <b>Basic Syntax:</b>
+          <pre>
+            <code class="language-javascript">
+            for(blockVar i = 0 to 5) {
+              // Loop body
+          }
+          </code>
+        </pre>
+        </p>
+        <p>
+          <ul>
+            <li><code>blockVar i = 0</code>: Declares the loop variable <code>i</code> using the <code>blockVar</code> keyword, which is block-scoped and mutable.</li>
+            <li><code>to 5</code>: Specifies the end value for the loop. The loop will iterate from 0 to 5 (inclusive) automatically incrementing <code>i</code> by 1 on each iteration.</li>
+            <li><b>Loop Body:</b> The code inside the curly braces <code>{}</code> will execute for each value of <code>i</code>.</li>
+          </ul>
+        </p>
+
+        <h4>Example: Single Loop</h4>
+        <p>
+          Here’s an example of a single loop using the simplified syntax:
+        </p>
+        <div class="syntax-box">
+          <div class="syntax-header">
+            CloneScript
+            <div>
+              <button class="copy-button" onclick="copyCode(this)">Copy</button>
+              <span class="Run_Aniket"><a href="">Try Yourself</a></span>
+            </div>
+          </div>
+          <pre><code class="language-javascript">
+for(blockVar i = 1 to 5) {
+    console.log("Iteration: " + i);
+}
+
+// Output:
+// Iteration: 1
+// Iteration: 2
+// Iteration: 3
+// Iteration: 4
+// Iteration: 5
+          </code></pre>
+        </div>
+
+        <h4>Example: Nested Loop</h4>
+        <p>
+          You can also use this simplified syntax for nested loops. Here’s an example:
+        </p>
+        <div class="syntax-box">
+          <div class="syntax-header">
+            CloneScript
+            <div>
+              <button class="copy-button" onclick="copyCode(this)">Copy</button>
+              <span class="Run_Aniket"><a href="">Try Yourself</a></span>
+            </div>
+          </div>
+          <pre><code class="language-javascript">
+for(blockVar i = 1 to 3) {
+    console.log("Outer loop iteration: " + i);
+    
+    for(blockVar j = 1 to 2) {
+        console.log("  Inner loop iteration: " + j);
+    }
+}
+
+// Output:
+// Outer loop iteration: 1
+//   Inner loop iteration: 1
+//   Inner loop iteration: 2
+// Outer loop iteration: 2
+//   Inner loop iteration: 1
+//   Inner loop iteration: 2
+// Outer loop iteration: 3
+//   Inner loop iteration: 1
+//   Inner loop iteration: 2
+          </code></pre>
+        </div>
+        
+      </div>
+    </div>
+
+    <script>
+      function copyCode(button) {
+        const codeBlock = button
+          .closest(".syntax-box")
+          .querySelector("code").innerText;
+        navigator.clipboard
+          .writeText(codeBlock)
+          .then(() => {
+            button.innerText = "Copied!";
+            setTimeout(() => {
+              button.innerText = "Copy";
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("Failed to copy text: ", err);
+          });
+      }
+
+      const toggleSwitch = document.getElementById("themeToggle");
+
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const darkMode = localStorage.getItem("dark-mode");
+        if (darkMode === "enabled") {
+          document.body.classList.add("dark-mode");
+          toggleSwitch.checked = true;
+        } else {
+          document.body.classList.remove("dark-mode");
+        }
+      });
+
+      toggleSwitch.addEventListener("change", function () {
+        if (this.checked) {
+          document.body.classList.add("dark-mode");
+          localStorage.setItem("dark-mode", "enabled");
+        } else {
+          document.body.classList.remove("dark-mode");
+          localStorage.setItem("dark-mode", "disabled");
+        }
+      });
+    </script>
+  </body>
+</html>

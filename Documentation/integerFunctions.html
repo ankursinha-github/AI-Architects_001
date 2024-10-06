@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VisionScript Number Methods Documentation</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <!-- Bootstrap JS Bundle -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Prism CSS and JS for Syntax Highlighting -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css"
+            rel="stylesheet"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+        <link rel="stylesheet" href="./integerFunctions.css" />
+    </head>
+    <body>
+        <!-- Navbar with Theme Toggle -->
+        <nav>
+            <div class="container text-end my-3 d-flex justify-content-between">
+                <div>
+                    <a href="./index.html" style="color: #ffff"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="40px"
+                            viewBox="0 -960 960 960"
+                            width="40px"
+                            fill="#FFFFFF"
+                        >
+                            <path
+                                d="M226.67-186.67h140v-246.66h226.66v246.66h140v-380L480-756.67l-253.33 190v380ZM160-120v-480l320-240 320 240v480H526.67v-246.67h-93.34V-120H160Zm320-352Z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <label for="themeToggle" class="form-label"
+                        >Light/Dark Mode</label
+                    >
+                    <input
+                        type="checkbox"
+                        id="themeToggle"
+                        class="form-check-input"
+                    />
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Wrapper -->
+        <div class="container-xl content-wrapper">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <ul>
+                    <h3>Tutorials</h3>
+                    <li><a href="./Doc.html">Introduction</a></li>
+                    <li><a href="./veriable.html">Variables</a></li>
+                    <li><a href="./Array.html">Array</a></li>
+                    <li><a href="./String.html">String</a></li>
+                    <li><a href="Conditional.html">Conditional Operator</a></li>
+                    <li><a href="loop.html">Loop</a></li>
+                    <li><a href="./int_fun.html">Intrger Functions</a></li>
+                    <li>
+                        <a href="./highorde.html">Higher Order Functions</a>
+                    </li>
+                    <li><a href="./sp.html">Special Functions</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <h2>Integer Methods</h2>
+                <p>Documentation for Custom Methods on Number.prototype</p>
+
+                <h4>Overview of Number in VisionScript</h4>
+                <p>
+                    Numbers in VisionScript represent both integers and
+                    floating-point values, such as 37 or -9.25. The Number
+                    constructor provides constants and methods for working with
+                    numeric values. It also allows conversion from other types
+                    using the Number() function.
+                </p>
+                <p>
+                    VisionScript numbers are based on the IEEE 754 standard for
+                    floating-point arithmetic, which can represent a wide range
+                    of values but may lead to precision issues with very large
+                    or very small numbers. For more information, refer to the
+                    Number documentation on MDN.
+                </p>
+
+                <!-- Number.prototype.isPrime -->
+                <h4>1. Number.prototype.isPrime</h4>
+                <p>
+                    <strong>Description:</strong> Determines if the number is a
+                    prime number. A prime number is a natural number greater
+                    than 1 that has no positive divisors other than 1 and
+                    itself.
+                </p>
+                <h5>Syntax</h5>
+                <pre><code class="language-VisionScript">number.isPrime()</code></pre>
+                <h5>Parameters</h5>
+                <p>None</p>
+                <h5>Return Value</h5>
+                <p>
+                    Boolean: Returns <code>true</code> if the number is a prime,
+                    otherwise <code>false</code>.
+                </p>
+                <h5>Time Complexity</h5>
+                <p>
+                    O(sqrt(n)): The algorithm checks for factors up to the
+                    square root of the number.
+                </p>
+                <h5>Space Complexity</h5>
+                <p>O(1): The algorithm uses a constant amount of space.</p>
+                <h5>Example</h5>
+                <div class="syntax-box">
+                    <div class="syntax-header">
+                        VisionScript
+                        <div>
+                            <button
+                                class="copy-button"
+                                onclick="copyCode(this)"
+                            >
+                                Copy
+                            </button>
+                            <a href="editor.html" class="run-button"
+                                >Try Yourself</a
+                            >
+                        </div>
+                    </div>
+                    <pre><code class="language-VisionScript">blockVar x = 7;
+console.log(x.isPrime()); // Outputs: true
+
+blockVar y = 4;
+console.log(y.isPrime()); // Outputs: false</code></pre>
+                </div>
+                <h5>Usage Notes</h5>
+                <p>
+                    This method assumes that the number is an integer. If the
+                    number is not an integer, it throws a TypeError. The method
+                    handles numbers less than 2 as non-prime.
+                </p>
+
+                <!-- Number.prototype.factorial -->
+                <h4>2. Number.prototype.factorial</h4>
+                <p>
+                    <strong>Description:</strong> Calculates the factorial of a
+                    non-negative integer. The factorial of a number n is the
+                    product of all positive integers less than or equal to n.
+                </p>
+                <h5>Syntax</h5>
+                <pre><code class="language-VisionScript">number.factorial()</code></pre>
+                <h5>Parameters</h5>
+                <p>None</p>
+                <h5>Return Value</h5>
+                <p>Number: Returns the factorial of the number.</p>
+                <h5>Time Complexity</h5>
+                <p>
+                    O(n): The algorithm iterates through all integers from 2 to
+                    n.
+                </p>
+                <h5>Space Complexity</h5>
+                <p>O(1): The algorithm uses a constant amount of space.</p>
+                <h5>Example</h5>
+                <div class="syntax-box">
+                    <div class="syntax-header">
+                        VisionScript
+                        <div>
+                            <button
+                                class="copy-button"
+                                onclick="copyCode(this)"
+                            >
+                                Copy
+                            </button>
+                            <a href="editor.html" class="run-button"
+                                >Try Yourself</a
+                            >
+                        </div>
+                    </div>
+                    <pre><code class="language-VisionScript">blockVar n = 5;
+console.log(n.factorial()); // Outputs: 120
+
+blockVar m = 0;
+console.log(m.factorial()); // Outputs: 1</code></pre>
+                </div>
+                <h5>Usage Notes</h5>
+                <p>
+                    This method is defined only for non-negative integers. If
+                    the number is negative, it throws a RangeError. The
+                    factorial of 0 is defined as 1.
+                </p>
+            </div>
+        </div>
+
+        <!-- Script for Theme Toggle and Copy Code Functionality -->
+        <script>
+            // Theme Toggle Functionality
+            const themeToggle = document.getElementById("themeToggle");
+            const body = document.body;
+
+            themeToggle.addEventListener("change", function () {
+                if (this.checked) {
+                    body.classList.add("dark-mode");
+                } else {
+                    body.classList.remove("dark-mode");
+                }
+            });
+
+            // Copy Code Function
+            function copyCode(button) {
+                const code = button
+                    .closest(".syntax-box")
+                    .querySelector("pre code").textContent;
+                navigator.clipboard.writeText(code);
+                button.textContent = "Copied!";
+                setTimeout(() => (button.textContent = "Copy"), 2000);
+            }
+        </script>
+    </body>
+</html>

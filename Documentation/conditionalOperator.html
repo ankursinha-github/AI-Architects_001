@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <link rel="stylesheet" href="./doc_style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="container text-end my-3 d-flex justify-content-between">
+        <div>
+        <a href="./index.html" style="color: #ffff; "><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="M226.67-186.67h140v-246.66h226.66v246.66h140v-380L480-756.67l-253.33 190v380ZM160-120v-480l320-240 320 240v480H526.67v-246.67h-93.34V-120H160Zm320-352Z"/></svg>
+      </a>  
+      </div>
+        <div>
+        <label for="themeToggle" class="form-label">Light/Dark Mode</label>
+        <input type="checkbox" id="themeToggle" class="form-check-input" />
+      </div>
+      </div>
+    </nav>
+    <div class="Cont_Aniket container-xxl">
+      <div>
+        <ul>
+          <h3>Tutorials</h3>
+          <li><a href="./introduction.html">Introduction</a></li>
+          <li><a href="./variables.html">Variables</a></li>
+          <li><a href="./arrays.html">Array</a></li>
+          <li><a href="./strings.html">String</a></li>
+          <li><a href="./conditionalOperator.html">Conditional Operator</a></li>
+          <li><a href="./loops.html">Loop</a></li>
+          <li><a href="./integerFunctions.html">Integer Functions</a></li>
+          <li><a href="./hof.html">Higher Order Functions</a></li>
+          <li><a href="./specialFunctions.html">Special Functions</a></li>
+        </ul>
+      </div>
+      <div>
+        <!-- New Content for If-Else Conditions in VisionScript -->
+        <h2>If-Else Conditions in the New Language</h2>
+        <br />
+        <p>
+          In your new programming language, conditional statements can be implemented using the standard <code>if-else</code> structure. This structure allows the code to execute certain blocks depending on whether a condition evaluates to true or false.
+        </p>
+        <p>
+          <b>Basic Syntax:</b>
+          <pre><code class="language-plaintext">
+if (condition) {
+    // Code to execute if condition is true
+} else {
+    // Code to execute if condition is false
+}
+          </code></pre>
+        </p>
+
+        <h4>Example 1: Simple Condition</h4>
+        <p>Here is an example of a simple condition check:</p>
+        <div class="syntax-box">
+          <div class="syntax-header">
+            VisionScript
+            <div>
+              <button class="copy-button" onclick="copyCode(this)">Copy</button>
+              <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+            </div>
+          </div>
+          <pre><code class="language-plaintext">
+blockVar x = 10;
+if (x == 10) {
+    console.log("x is 10");
+} else {
+    console.log("x is not 10");
+}
+
+// Output:
+// x is 10
+          </code></pre>
+        </div>
+
+        <h4>Example 2: Multiple Conditions</h4>
+        <p>This example evaluates the age and categorizes it:</p>
+        <div class="syntax-box">
+          <div class="syntax-header">
+            VisionScript
+            <div>
+              <button class="copy-button" onclick="copyCode(this)">Copy</button>
+              <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+            </div>
+          </div>
+          <pre><code class="language-plaintext">
+blockVar age = 20;
+if (age < 13) {
+    console.log("Child");
+} else if (age >= 13 && age < 20) {
+    console.log("Teenager");
+} else {
+    console.log("Adult");
+}
+
+// Output:
+// Adult
+          </code></pre>
+        </div>
+
+        <h4>Example 3: Nested If-Else</h4>
+        <p>This example uses nested if-else statements:</p>
+        <div class="syntax-box">
+          <div class="syntax-header">
+            VisionScript
+            <div>
+              <button class="copy-button" onclick="copyCode(this)">Copy</button>
+              <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+            </div>
+          </div>
+          <pre><code class="language-plaintext">
+blockVar num = 15;
+if (num > 10) {
+    if (num < 20) {
+        console.log("num is between 10 and 20");
+    } else {
+        console.log("num is 20 or more");
+    }
+} else {
+    console.log("num is 10 or less");
+}
+
+// Output:
+// num is between 10 and 20
+          </code></pre>
+        </div>
+
+        <p><b>Key Features:</b></p>
+        <ul>
+          <li><b>Human-Readable Syntax:</b> The syntax is designed to be straightforward and intuitive, making it easy for developers to read and write code.</li>
+          <li><b>Standardized Structure:</b> By adhering to the familiar <code>if-else</code> structure, the language ensures that users can transition smoothly from other programming languages.</li>
+        </ul>
+        
+      </div>
+    </div>
+
+    <script>
+      function copyCode(button) {
+        const codeBlock = button
+          .closest(".syntax-box")
+          .querySelector("code").innerText;
+        navigator.clipboard
+          .writeText(codeBlock)
+          .then(() => {
+            button.innerText = "Copied!";
+            setTimeout(() => {
+              button.innerText = "Copy";
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("Failed to copy text: ", err);
+          });
+      }
+
+      const toggleSwitch = document.getElementById("themeToggle");
+
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const darkMode = localStorage.getItem("dark-mode");
+        if (darkMode === "enabled") {
+          document.body.classList.add("dark-mode");
+          toggleSwitch.checked = true;
+        } else {
+          document.body.classList.remove("dark-mode");
+        }
+      });
+
+      toggleSwitch.addEventListener("change", function () {
+        if (this.checked) {
+          document.body.classList.add("dark-mode");
+          localStorage.setItem("dark-mode", "enabled");
+        } else {
+          document.body.classList.remove("dark-mode");
+          localStorage.setItem("dark-mode", "disabled");
+        }
+      });
+    </script>
+  </body>
+</html>
