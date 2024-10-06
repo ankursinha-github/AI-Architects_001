@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -268,8 +268,10 @@ section h1 span {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: calc(20% - 20px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        background-color 0.3s ease;
     position: relative;
+    cursor: pointer;
 }
 
 .childCard:hover {
@@ -330,7 +332,7 @@ section h1 span {
     main {
         padding: 40px 0;
     }
-    
+
     .childCard {
         width: calc(50% - 20px);
     }
