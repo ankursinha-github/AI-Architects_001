@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    max-height: 100vh;
+    position: sticky;
+    top: 20px;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul h3 {
+    padding-bottom: 20px;
+}
+
+.sidebar ul li {
+    padding: 5px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.main-content {
+    flex-grow: 1;
+    max-width: 800px;
+}
+
+.syntax-box {
+    background-color: var(--syntax-box-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    position: relative;
+}
+
+.syntax-header {
+    background-color: var(--syntax-header-bg);
+    color: var(--syntax-header-color);
+    padding: 8px 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copy-button {
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.copy-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+pre {
+    margin: 0;
+    padding: 16px;
+    background-color: var(--pre-bg);
+    overflow-x: auto;
+}
+
+code {
+    color: var(--code-color);
+    font-family: "Courier New", Courier, monospace;
+    display: block;
+    white-space: pre;
+}
+
+.run-button {
+    background-color: rgb(47, 47, 248);
+    border-radius: 8px;
+    color: #fff;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+/* Light Mode Variables */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #007bff;
+    --syntax-box-bg: #f5f5f5;
+    --syntax-header-bg: #eaeaea;
+    --syntax-header-color: #333;
+    --button-bg: #ddd;
+    --button-color: #333;
+    --button-hover-bg: #ccc;
+    --pre-bg: #ffffff;
+    --code-color: #333;
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --link-color: #82aaff;
+    --syntax-box-bg: #2d2d2d;
+    --syntax-header-bg: #252526;
+    --syntax-header-color: #d7ba7d;
+    --button-bg: #444;
+    --button-color: #d7ba7d;
+    --button-hover-bg: #666;
+    --pre-bg: #1e1e1e;
+    --code-color: #d4d4d4;
+}
+
+nav {
+    background-color: transparent;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <link rel="stylesheet" href="./doc_style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="container text-end my-3 d-flex justify-content-between">
+        <div>
+        <a href="./index.html" style="color: #ffff; "><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="M226.67-186.67h140v-246.66h226.66v246.66h140v-380L480-756.67l-253.33 190v380ZM160-120v-480l320-240 320 240v480H526.67v-246.67h-93.34V-120H160Zm320-352Z"/></svg>
+      </a>  
+      </div>
+        <div>
+        <label for="themeToggle" class="form-label">Light/Dark Mode</label>
+        <input type="checkbox" id="themeToggle" class="form-check-input" />
+      </div>
+      </div>
+    </nav>
+    <div class="Cont_Aniket container-xxl">
+      <div>
+        <ul>
+            <h3>Tutorials</h3>
+            <li><a href="./Doc.html">Introduction</a></li>
+            <li><a href="./veriable.html">Variables</a></li>
+            <li><a href="./Array.html">Array</a></li>
+            <li><a href="./String.html">String</a></li>
+            <li><a href="Conditional.html">Conditional Operator</a></li>
+            <li><a href="loop.html">Loop</a></li>
+            <li><a href="./int_fun.html">Intrger Functions</a></li>
+            <li><a href="./highorde.html">Higher Order Functions</a></li>
+            <li><a href="./sp.html">Special Functions</a></li>
+      </div>
+      <div>
+        <div>
+            <!-- New Section for Custom Methods -->
+            <h2>Array Methods: VSEvery and VSSome</h2>
+            <p>
+              CloneScript provides enhanced methods to evaluate array elements: <code>VSEvery</code> and <code>VSSome</code>. These methods are designed to simplify checks for array conditions, offering functionality similar to JavaScript's <code>every</code> and <code>some</code> methods.
+            </p>
+            
+            <h4>1. VSEvery</h4>
+            <p>
+              <b>Description:</b> The <code>VSEvery</code> method tests whether all elements in the array pass the provided function. It returns <code>true</code> if all elements satisfy the callback condition; otherwise, it returns <code>false</code>.
+            </p>
+            <div class="syntax-box">
+              <div class="syntax-header">
+                CloneScript
+                <div>
+                  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                  <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+                </div>
+              </div>
+              <pre><code class="language-javascript">
+    constantVar numbers = [2, 4, 6, 8, 10];
+    // Use Every to check if all numbers are even
+    allEven = numbers.VSEvery(function(number) {
+        return number % 2 === 0;
+    });
+    console.log(allEven); // Output: true
+    
+    constantVar mixedNumbers = [1, 2, 3, 4, 5];
+    // Use Every to check if all numbers are greater than 0
+   allPositive = mixedNumbers.VSEvery(function(number) {
+        return number > 0;
+    });
+    console.log(allPositive); // Output: true
+              </code></pre>
+            </div>
+            
+            <h4>2. VSSome</h4>
+            <p>
+              <b>Description:</b> The <code>VSSome</code> method tests whether at least one element in the array passes the provided function. It returns <code>true</code> if any element satisfies the callback condition; otherwise, it returns <code>false</code>.
+            </p>
+            <div class="syntax-box">
+              <div class="syntax-header">
+                CloneScript
+                <div>
+                  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                  <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+                </div>
+              </div>
+              <pre><code class="language-javascript">
+    constantVar numbers = [1, 3, 5, 7, 9];
+    // Use Some to check if there is any even number
+    hasEvenNumber = numbers.VSSome(function(number) {
+        return number % 2 === 0;
+    });
+    console.log(hasEvenNumber); // Output: false
+    
+    constantVar mixedNumbers = [1, 2, 3, 4, 5];
+    // Use Some to check if there is any number greater than 4
+    hasGreaterThanFour = mixedNumbers.VSSome(function(number) {
+        return number > 4;
+    });
+    console.log(hasGreaterThanFour); // Output: true
+              </code></pre>
+            </div>
+    
+            <!-- Updated Section for String Functions -->
+            <h2>String Methods: VSCharAt, VSLastIndexOf, VSToUpperCase, VSToLowerCase, VSConcat</h2>
+            
+            <h4>1. VSCharAt</h4>
+            <p>
+              <b>Description:</b> This <code>VSCharAt</code> function retrieves the character at a specified index from a string, similar to JavaScript's <code>charAt</code>.
+            </p>
+            <div class="syntax-box">
+              <div class="syntax-header">
+                CloneScript
+                <div>
+                  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                  <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+                </div>
+              </div>
+              <pre><code class="language-javascript">
+    constantVar str = "Hello, World!";
+    // Use CharAt to get the character at a specific index
+    constantVar charAt5 = str.VSCharAt(5);
+    constantVar charAt11 = str.VSCharAt(11);
+    console.log(charAt5); // Output: ","
+    console.log(charAt11); // Output: "d"
+    // Index out of range example
+    constantVar charAt20 = str.VSCharAt(20);
+    console.log(charAt20); // Output: ""
+              </code></pre>
+            </div>
+    
+            <h4>2. VSLastIndexOf</h4>
+            <p>
+              <b>Description:</b> The <code>VSLastIndexOf</code> method finds the last occurrence of a substring within a string.
+            </p>
+            <div class="syntax-box">
+              <div class="syntax-header">
+                CloneScript
+                <div>
+                  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                  <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+                </div>
+              </div>
+              <pre><code class="language-javascript">
+    ConstantVar str = "Hello, World! Hello!";
+    // Use LastIndexOf to find the last occurrence of a substring
+    ConstantVar lastIndexOfHello = str.VSLastIndexOf("Hello");
+    ConstantVar lastIndexOfWorld = str.VSLastIndexOf("World");
+    console.log(lastIndexOfHello); // Output: 14 (the last "Hello" starts at index 14)
+    console.log(lastIndexOfWorld); // Output: 7 (the "World" starts at index 7)
+    // Search for a substring that doesn't exist
+    ConstantVar lastIndexOfTest = str.VSLastIndexOf("Test");
+    console.log(lastIndexOfTest); // Output: -1
+              </code></pre>
+            </div>
+    
+            <h4>3. VSToUpperCase</h4>
+            <p>
+              <b>Description:</b> The <code>VSToUpperCase</code> method converts all characters in a string to uppercase.
+            </p>
+            <div class="syntax-box">
+              <div class="syntax-header">
+                CloneScript
+                <div>
+                  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                  <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+                </div>
+              </div>
+              <pre><code class="language-javascript">
+    ConstantVar str = "Hello, World!";
+    // Use ToUpperCase to convert the string to uppercase
+    ConstantVar upperStr = str.VSToUpperCase();
+    console.log(upperStr); // Output: "HELLO, WORLD!"
+              </code></pre>
+            </div>
+    
+            <h4>4. VSToLowerCase</h4>
+            <p>
+              <b>Description:</b> The <code>VSToLowerCase</code> method converts all characters in a string to lowercase.
+            </p>
+            <div class="syntax-box">
+              <div class="syntax-header">
+                CloneScript
+                <div>
+                  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                  <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+                </div>
+              </div>
+              <pre><code class="language-javascript">
+    ConstantVar str = "Hello, World!";
+    // Use ToLowerCase to convert the string to lowercase
+    ConstantVar lowerStr = str.VSToLowerCase();
+    console.log(lowerStr); // Output: "hello, world!"
+              </code></pre>
+            </div>
+    
+            <h4>5. VSConcat</h4>
+            <p>
+              <b>Description:</b> The <code>VSConcat</code> method concatenates multiple strings.
+            </p>
+            <div class="syntax-box">
+              <div class="syntax-header">
+                CloneScript
+                <div>
+                  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                  <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+                </div>
+              </div>
+              <pre><code class="language-javascript">
+    ConstantVar str1 = "Hello";
+    ConstantVar str2 = " ";
+    ConstantVar str3 = "World!";
+    ConstantVar str4 = " How are you?";
+    // Use Concat to concatenate multiple strings
+    ConstantVar result = str1.VSConcat(str2, str3, str4);
+    console.log(result); // Output: "Hello World! How are you?"
+              </code></pre>
+            </div>
+          
+            <!-- started adding from here -->
+
+            <h4>6. VSisAnagram()</h4>
+            <p>
+              <b>Description:</b> The <code>VSisAnagram()</code> method Checks if two strings are anagrams of each other. An anagram is a word or phrase formed by rearranging the letters of another.
+              
+            </p>
+            <div class="syntax-box">
+              <div class="syntax-header">
+                CloneScript
+                <div>
+                  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                  <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+                </div>
+              </div>
+              <pre><code class="language-javascript">
+    blockVar str1 = "listen";
+    blockVar str2 = "silent";
+    blockVar result = str1.VSisAnagram(str2); 
+    console.log(result)
+    // result is true
+    
+              </code></pre>
+            </div>
+            <h4>7. VScharacterFrequency()</h4>
+            <p>
+              <b>Description:</b> The <code>VScharacterFrequency()</code> returns a frequency map of characters in a string. The method counts how many times each character appears in the string and returns this information as an object (or map).
+              
+            </p>
+            <div class="syntax-box">
+              <div class="syntax-header">
+                VisionScript
+                <div>
+                  <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                  <span class="Run_Aniket"><a href="editor.html">Try Yourself</a></span>
+                </div>
+              </div>
+              <pre><code class="language-javascript">
+    blockVar str = "hello world";
+    blockVar frequencyMap = str.characterFrequency();
+    // frequencyMap = { h: 1, e: 1, l: 3, o: 2, ' ': 1, w: 1, r: 1, d: 1 }
+                
+    
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        </div>
+        <script>
+          // Function to copy code from the code block when the button is clicked
+function copyCode(button) {
+  // Find the nearest code block within the .syntax-box container
+  const codeBlock = button.closest(".syntax-box").querySelector("code").innerText;
+  
+  // Copy the text content of the code block to the clipboard
+  navigator.clipboard
+    .writeText(codeBlock)
+    .then(() => {
+      // Provide feedback to the user by changing button text temporarily
+      button.innerText = "Copied!";
+      setTimeout(() => {
+        button.innerText = "Copy";
+      }, 2000); // Reset button text after 2 seconds
+    })
+    .catch((err) => {
+      console.error("Failed to copy text: ", err);
+    });
+}
+
+// Reference to the theme toggle checkbox
+const toggleSwitch = document.getElementById("themeToggle");
+
+// Event listener to handle page load and apply the saved theme mode
+document.addEventListener("DOMContentLoaded", (event) => {
+  const darkMode = localStorage.getItem("dark-mode");
+  if (darkMode === "enabled") {
+    document.body.classList.add("dark-mode"); // Enable dark mode
+    toggleSwitch.checked = true; // Set the toggle switch to checked
+  } else {
+    document.body.classList.remove("dark-mode"); // Ensure dark mode is disabled
+  }
+});
+
+// Event listener for the theme toggle switch
+toggleSwitch.addEventListener("change", function () {
+  if (this.checked) {
+    document.body.classList.add("dark-mode"); // Add dark mode class
+    localStorage.setItem("dark-mode", "enabled"); // Save the setting in local storage
+  } else {
+    document.body.classList.remove("dark-mode"); // Remove dark mode class
+    localStorage.setItem("dark-mode", "disabled"); // Save the setting in local storage
+  }
+});
+
+        </script>
+  </body>
+</html>
