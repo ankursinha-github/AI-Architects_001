@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     line-height: 1.6;
     background-color: #f7f8fa;
     color: #333;
@@ -330,7 +330,7 @@ a:hover {
 .code_head h3 {
     margin: 0;
     font-size: 1.2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Buttons inside Code Block Header */
@@ -365,7 +365,7 @@ pre {
     max-width: 100%;
     color: #ffffff;
     /* Default text color is white */
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 0.9rem;
     line-height: 1.5;
     white-space: pre;
@@ -374,27 +374,27 @@ pre {
 
 /* Syntax Highlighting */
 .keyword {
-    color: #C5A5C5;
+    color: #c5a5c5;
 }
 
 /* Keywords (e.g., if, else) */
 .operator {
-    color: #80B6FF;
+    color: #80b6ff;
 }
 
 /* Operators (e.g., =, +) */
 .number {
-    color: #80B6FF;
+    color: #80b6ff;
 }
 
 /* Numbers (e.g., 10, 5) */
 .string {
-    color: #80B6FF;
+    color: #80b6ff;
 }
 
 /* Strings (e.g., "Hello") */
 .function {
-    color: #FFD700;
+    color: #ffd700;
 }
 
 /* Functions (e.g., console.log) */
