@@ -60,11 +60,11 @@
                     <li><a href="./veriable.html">Variables</a></li>
                     <li><a href="./Array.html">Array</a></li>
                     <li><a href="./String.html">String</a></li>
-                    <li><a href="Conditional.html">Conditional Operator</a></li>
+                    <li><a href="Conditional.html">Operator</a></li>
                     <li><a href="loop.html">Loop</a></li>
-                    <li><a href="./int_fun.html">Intrger Functions</a></li>
+                    <li><a href="./int_fun.html">Integer Functions</a></li>
                     <li>
-                        <a href="./highorde.html">Higher Order Functions</a>
+                        <a href="./highorde.html">HOF</a>
                     </li>
                     <li><a href="./sp.html">Special Functions</a></li>
                 </ul>
@@ -103,7 +103,7 @@
 
                 <div class="syntax-box">
                     <div class="syntax-header">
-                        VisionScript
+                        CloneScript
                         <div>
                             <button
                                 class="copy-button"
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                     <pre><code class="language-javascript">
-fix numbers = [1, 2, 3, 4, 5, 6];
+constantVar numbers = [1, 2, 3, 4, 5, 6];
 // Use Filter to filter out even numbers
 evenNumbers = numbers.Filter(function(number) {
     return number % 2 === 0;
@@ -149,7 +149,7 @@ console.log(evenNumbers); // Output: [2, 4, 6]
 
                 <div class="syntax-box">
                     <div class="syntax-header">
-                        VisionScript
+                        CloneScript
                         <div>
                             <button
                                 class="copy-button"
@@ -163,7 +163,7 @@ console.log(evenNumbers); // Output: [2, 4, 6]
                         </div>
                     </div>
                     <pre><code class="language-javascript">
-fix numbers = [5, 3, 8, 1, 2];
+constantVar numbers = [5, 3, 8, 1, 2];
 // Use Sort to sort numbers in ascending order
 numbers.Sort();
 console.log(numbers); // Output: [1, 2, 3, 5, 8]
@@ -202,7 +202,7 @@ console.log(numbers); // Output: [8, 5, 3, 2, 1]
 
                 <div class="syntax-box">
                     <div class="syntax-header">
-                        VisionScript
+                        CloneScript
                         <div>
                             <button
                                 class="copy-button"
@@ -216,7 +216,7 @@ console.log(numbers); // Output: [8, 5, 3, 2, 1]
                         </div>
                     </div>
                     <pre><code class="language-javascript">
-fix numbers = [5, 12, 8, 130, 44];
+constantVar numbers = [5, 12, 8, 130, 44];
 // Use Find to find the first number greater than 10
 found = numbers.Find(function(number) {
     return number > 10;
@@ -254,7 +254,7 @@ console.log(found); // Output: 12
 
                 <div class="syntax-box">
                     <div class="syntax-header">
-                        VisionScript
+                        CloneScript
                         <div>
                             <button
                                 class="copy-button"
@@ -268,7 +268,7 @@ console.log(found); // Output: 12
                         </div>
                     </div>
                     <pre><code class="language-javascript">
-fix numbers = [1, 2, 3, 4, 5];
+constantVar numbers = [1, 2, 3, 4, 5];
 // Check if array includes the number 3
 includesThree = numbers.Includes(3);
 console.log(includesThree); // Output: true
@@ -305,7 +305,7 @@ console.log(includesThree); // Output: true
 
                 <div class="syntax-box">
                     <div class="syntax-header">
-                        VisionScript
+                        CloneScript
                         <div>
                             <button
                                 class="copy-button"
@@ -319,7 +319,7 @@ console.log(includesThree); // Output: true
                         </div>
                     </div>
                     <pre><code class="language-javascript">
-fix numbers = [1, 2, 3, 4, 5];
+constantVar numbers = [1, 2, 3, 4, 5];
 // Use Reduces to calculate the sum of all numbers
 sum = numbers.Reduce(function(accumulator, currentValue) {
     return accumulator + currentValue;
