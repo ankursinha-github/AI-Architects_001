@@ -8,6 +8,8 @@ Welcome to Al-Architects_001, an innovative project that aims to create a new pr
 
 By the end of this project, we aim to deliver a fully functional language and IDE that empowers developers to efficiently write, test, and run code. This project showcases our team's ambition to build from scratch, innovate, and contribute to the programming community.
 
+![CloneScript Editor](ss1.png)
+
 # Features
 
 1. Programming Language Development
@@ -30,24 +32,24 @@ User authentication features to ensure secure access to the IDE and user account
 
 # Project Folder Structure
 
-Al-Architects_001/
-    ├── assets/                           # Static assets (CSS, JS, Images)
-    ├── Documentation/                    # Project documentation for the language and IDE
-            ├── introduction.html
-    ├── editor/                           # IDE-related files (HTML, CSS, JS)
-            ├── editor.html
-    ├── images/                           # Image assets for the IDE and website
-    ├── language/                         # Core programming language files (Interpreter, Compiler)
-    ├── loginAuth/                        # User authentication files (Login, Registration)
-            ├── login.html
-            ├── signup.html
-    ├── page/                             # Web pages (Homepage, About, etc.)
-            ├── our Team
-                    ├── ourTeam.html
-    ├── .gitignore                        # Git ignore file
-    ├── editor.css                        # Styling for the code editor
-    ├── index.html                        # Main landing page for the IDE
-    ├── test.html                         # Test page for running sample code
+Al-Architects_001/<br/>
+    ├── assets/                           # Static assets (CSS, JS, Images)<br/>
+    ├── Documentation/                    # Project documentation for the language and IDE<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;├── introduction.html<br/>
+    ├── editor/                           # IDE-related files (HTML, CSS, JS)<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;├── editor.html<br/>
+    ├── images/                           # Image assets for the IDE and website<br/>
+    ├── language/                         # Core programming language files (Interpreter, Compiler)<br/>
+    ├── loginAuth/                        # User authentication files (Login, Registration)<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;├── login.html<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;├── signup.html<br/>
+    ├── page/                             # Web pages (Homepage, About, etc.)<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;├── our Team<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── ourTeam.html<br/>
+    ├── .gitignore                        # Git ignore file<br/>
+    ├── editor.css                        # Styling for the code editor<br/>
+    ├── index.html                        # Main landing page for the IDE<br/>
+    ├── test.html                         # Test page for running sample code<br/>
 
 # Getting Started
 
