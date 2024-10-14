@@ -8,6 +8,8 @@ Welcome to Al-Architects_001, an innovative project that aims to create a new pr
 
 By the end of this project, we aim to deliver a fully functional language and IDE that empowers developers to efficiently write, test, and run code. This project showcases our team's ambition to build from scratch, innovate, and contribute to the programming community.
 
+![CloneScript Editor](ss1.png)
+
 # Features
 
 1. Programming Language Development
