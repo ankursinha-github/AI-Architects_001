@@ -1,12 +1,10 @@
 # Al-Architects_001: Custom Programming Language and IDE
 
-# Deployed Link : https://relaxed-gumdrop-fc996a.netlify.app/
+# Deployed Link : https://clonescriptlang.netlify.app/
 
 # Project Overview
 
-Welcome to Al-Architects_001, an innovative project that aims to create a new programming language along with an Integrated Development Environment (IDE). Our goal is to develop a language that supports fundamental programming concepts and an IDE that provides a user-friendly interface for writing and executing code in the language.
-
-By the end of this project, we aim to deliver a fully functional language and IDE that empowers developers to efficiently write, test, and run code. This project showcases our team's ambition to build from scratch, innovate, and contribute to the programming community.
+Al-Architects_001 is an innovative project focused on developing a new programming language alongside a custom Integrated Development Environment (IDE). This language will support core programming concepts, and the IDE will feature a user-friendly interface for writing and executing code. The tech stack includes HTML, CSS, JavaScript, and Tailwind CSS, enabling a responsive and visually appealing design for the IDE.
 
 ![CloneScript Editor](ss1.png)
 
